@@ -52,13 +52,16 @@ tool suitable for both individual research workflows and group-wide use.
 
 Unless overridden via command-line options, the following defaults are used:
 
-`JOB_TYPE             : sp`   
-`METHOD               : mrsf`  
-`EXCHANGE             : bhhlyp`  
-`BASIS                : 6-31G*`  
-`CHARGE               : 0`  
-`TARGET MULTIPLICITY  : 1`  
-`MOLDEN_FORMAT        : TRUE`  
+| Keyword        | Default |
+|---------------|---------|
+| JOB_TYPE      | sp      |
+| METHOD        | mrsf    |
+| EXCHANGE      | bhhlyp  |
+| BASIS         | 6-31G*  |
+| CHARGE        | 0       |
+| MULTIPLICITY  | 1       |
+| MOLDEN_FORMAT | TRUE    |
+
 
 These defaults are chosen to reflect common usage patterns for MRSF-TDDFT
 energy calculations.
@@ -66,20 +69,24 @@ energy calculations.
 
 ## Repository Structure
 
-`qchem-inputgen/`  
-- `README.txt`  
-- `LICENSE`  
-- `pyproject.toml`  
-- `scripts/`  
-   - `qchem-inputgen`  
-- `src/`  
-    - `qchem_inputgen/`  
-        - `__init__.py`  
-        - `__main__.py`  
-        - `cli.py`  
-        - `xyz.py`  
-        - `qchem.py`  
-
+```text
+qchem-inputgen/
+├── README.md
+├── LICENSE
+├── pyproject.toml
+├── scripts/
+│   └── qchem-inputgen
+├── src/
+│   └── qchem_inputgen/
+│       ├── __init__.py
+│       ├── __main__.py
+│       ├── cli.py
+│       ├── qchem.py
+│       └── xyz.py
+└── tests/
+    ├── test_render.py
+    └── test_xyz.py
+```
 
 ## Design Overview
 
