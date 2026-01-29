@@ -77,9 +77,9 @@ class QChemInputWriter:
 
         # $rem
         rem: List[str] = ["$rem"]
-        rem.append(self._kv("jobtype", opts.jobtype))
-        rem.append(self._kv("unrestricted", self._tf(opts.unrestricted)))
-        rem.append(self._kv("basis", opts.basis))
+        rem.append(self._kv("JOBTYPE", opts.jobtype))
+        rem.append(self._kv("UNRESTRICTED", self._tf(opts.unrestricted)))
+        rem.append(self._kv("BASIS", opts.basis))
         rem.append(self._kv("EXCHANGE", opts.exchange))
         rem.append(self._kv("SCF_GUESS", opts.scf_guess))
         rem.append(self._kv("SCF_CONVERGENCE", str(opts.scf_convergence)))
@@ -91,7 +91,7 @@ class QChemInputWriter:
         rem.append(self._kv("CIS_TRIPLETS", self._tf(opts.cis_triplets)))
         rem.append(self._kv("CIS_CONVERGENCE", str(opts.cis_convergence)))
         rem.append(self._kv("MAX_CIS_CYCLES", str(opts.max_cis_cycles)))
-        rem.append(self._kv("sts_mom", "true" if opts.sts_mom else "false"))
+        rem.append(self._kv("STS_MOM", "TRUE" if opts.sts_mom else "FALSE"))
         rem.append("$end")
         blocks.append("\n".join(rem) + "\n")
 
