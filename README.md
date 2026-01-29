@@ -1,6 +1,12 @@
 # qchem_inputgen
 Lightweight Python tool to generate Q-Chem input files from XYZ geometries, with defaults tailored for MRSF calculations and a clean CLI interface.
 
+[![PyPI version](https://img.shields.io/pypi/v/qchem-inputgen.svg)](https://pypi.org/project/qchem-inputgen/)
+[![Python versions](https://img.shields.io/pypi/pyversions/qchem-inputgen.svg)](https://pypi.org/project/qchem-inputgen/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/qchem-inputgen.svg)](https://pypi.org/project/qchem-inputgen/)
+
+
+
 ## qchem_inputgen
 
 qchem_inputgen is a lightweight, object-oriented Python tool for generating
