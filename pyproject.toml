@@ -21,3 +21,10 @@ Issues = "https://github.com/achakra9/qchem_inputgen/issues"
 
 [project.scripts]
 qchem-inputgen = "qchem_inputgen.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
