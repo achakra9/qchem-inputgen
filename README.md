@@ -52,13 +52,13 @@ tool suitable for both individual research workflows and group-wide use.
 
 Unless overridden via command-line options, the following defaults are used:
 
-JOB_TYPE             : sp   
-METHOD               : mrsf  
-EXCHANGE             : bhhlyp  
-BASIS                : 6-31G*  
-CHARGE               : 0  
-TARGET MULTIPLICITY  : 1  
-MOLDEN_FORMAT        : TRUE  
+`JOB_TYPE             : sp`   
+`METHOD               : mrsf`  
+`EXCHANGE             : bhhlyp`  
+`BASIS                : 6-31G*`  
+`CHARGE               : 0`  
+`TARGET MULTIPLICITY  : 1`  
+`MOLDEN_FORMAT        : TRUE`  
 
 These defaults are chosen to reflect common usage patterns for MRSF-TDDFT
 energy calculations.
@@ -66,36 +66,36 @@ energy calculations.
 
 ## Repository Structure
 
-qchem-inputgen/  
-- README.txt  
-- LICENSE  
-- pyproject.toml  
-- scripts/  
-   - qchem-inputgen  
-- src/  
-    - qchem_inputgen/  
-        - __init__.py  
-        - __main__.py  
-        - cli.py  
-        - xyz.py  
-        - qchem.py  
+`qchem-inputgen/`  
+- `README.txt`  
+- `LICENSE`  
+- `pyproject.toml`  
+- `scripts/`  
+   - `qchem-inputgen`  
+- `src/`  
+    - `qchem_inputgen/`  
+        - `__init__.py`  
+        - `__main__.py`  
+        - `cli.py`  
+        - `xyz.py`  
+        - `qchem.py`  
 
 
 ## Design Overview
 
-xyz.py  
+`xyz.py`  
   Responsible for parsing and validating XYZ geometry files.
 
-qchem.py  
+`qchem.py`  
   Defines Q-Chem input options and renders the $molecule and $rem blocks.
 
-cli.py  
+`cli.py`  
   Implements the command-line interface and orchestrates the workflow.
 
-__main__.py  
-  Enables execution via "python -m qchem_inputgen".
+`__main__.py`  
+  Enables execution via `python -m qchem_inputgen`.
 
-scripts/qchem-inputgen  
+`scripts/qchem-inputgen`  
   Standalone executable launcher for users who do not wish to install the
   package.
 
@@ -174,7 +174,7 @@ The generated input contains:
 - A $rem block with user-specified or default keywords
 
 
-## Extending the Tool
+<!-- ## Extending the Tool
 
 The code is intentionally modular and easy to extend. Common extensions include:
 
@@ -182,8 +182,7 @@ The code is intentionally modular and easy to extend. Common extensions include:
 - Supporting excited-state or gradient calculations
 - Reading settings from a YAML or JSON configuration file
 - Inferring charge or multiplicity from file names
-- Adding job templates for properties or response calculations
-
+- Adding job templates for properties or response calculations -->
 
 ## Intended Audience
 
