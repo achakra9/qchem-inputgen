@@ -1,2 +1,0 @@
-[console_scripts]
-qchem_inputgen = qchem_inputgen.cli:main
